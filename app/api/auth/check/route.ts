@@ -1,0 +1,11 @@
+import { type NextRequest, NextResponse } from "next/server"
+
+export async function GET(request: NextRequest) {
+  const adminSession = request.cookies.get("admin_session")
+  
+  if (adminSession) {
+    return NextResponse.json({ authenticated: true }, { status: 200 })
+  } else {
+    return NextResponse.json({ authenticated: false }, { status: 401 })
+  }
+}
