@@ -4,26 +4,33 @@ import { TopicsList } from "@/components/topics-list";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full relative">
-      <div className="fixed inset-0 z-0 p-4 md:p-8">
-        <div className="relative w-full h-full">
-          <Background
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4"
-            placeholder="/alt-placeholder.png"
-          />
-        </div>
-      </div>
+    <main className="h-screen w-full relative overflow-hidden bg-background">
+      {/* Framed Container */}
+      <div className="fixed inset-0 z-0 p-4 md:p-8 flex flex-col">
+        <div className="relative w-full h-full rounded-[42px] md:rounded-[72px] overflow-hidden group">
+          {/* Background Video - stays fixed behind content */}
+          <div className="absolute inset-0 z-0">
+            <Background
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alt-g7Cv2QzqL3k6ey3igjNYkM32d8Fld7.mp4"
+              placeholder="/alt-placeholder.png"
+            />
+          </div>
 
-      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center items-center py-24">
-        <div className="w-full max-w-6xl flex flex-col items-center">
-          <h1 className="text-7xl md:text-9xl font-serif italic font-normal text-white mb-12 text-center drop-shadow-2xl">
-            Softy
-          </h1>
-          <div className="w-full">
-            <TopicsList />
+          {/* Scrollable Content Layer - contained within the frame */}
+          <div className="relative z-10 w-full h-full overflow-y-auto custom-scrollbar">
+            <div className="container mx-auto px-4 py-24 flex flex-col items-center">
+              <div className="w-full max-w-6xl flex flex-col items-center">
+                <h1 className="text-7xl md:text-9xl font-serif italic font-normal text-white mb-12 text-center drop-shadow-2xl">
+                  Softy
+                </h1>
+                <div className="w-full">
+                  <TopicsList />
+                </div>
+              </div>
+            </div>
+            <Footer />
           </div>
         </div>
-        <Footer />
       </div>
     </main>
   );
