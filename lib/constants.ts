@@ -3,7 +3,7 @@ export const TABLES = {
 };
 
 export const socialLinks = {
-  instagram: "https://www.instagram.com/joyco.studio",
-  x: "https://x.com/joyco_studio",
-  github: "https://github.com/joyco-studio",
+  instagram: "https://www.instagram.com/bimbokmkj",
+  linkedin: "https://www.linkedin.com/in/bratik-mukherjee",
+  github: "https://github.com/Bimbok",
 };
