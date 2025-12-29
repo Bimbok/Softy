@@ -4,7 +4,7 @@ import { TopicsList } from "@/components/topics-list";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full relative overflow-hidden">
+    <main className="min-h-screen w-full relative">
       <div className="fixed inset-0 z-0 p-4 md:p-8">
         <div className="relative w-full h-full">
           <Background
@@ -14,7 +14,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 h-screen flex flex-col justify-center items-center">
+      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center items-center py-24">
         <div className="w-full max-w-6xl flex flex-col items-center">
           <h1 className="text-7xl md:text-9xl font-serif italic font-normal text-white mb-12 text-center drop-shadow-2xl">
             Softy
